@@ -15,16 +15,14 @@ const modals = () => {
     });
 
     document.addEventListener('keydown', (event) => {
-      console.log(event);
       if (event.keyCode === 27) {
-        modal.style.display = 'none';
+        closeModal(modal);
       }
     });
 
     close.addEventListener('click', () => {
       closeModal(modal);
     });
-
 
 
     modal.addEventListener('click', (event) => {
