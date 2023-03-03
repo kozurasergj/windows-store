@@ -15,7 +15,7 @@ const modals = () => {
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.keyCode === 27) {
+      if (event.code === 'Escape') {
         closeModal(modal);
       }
     });
