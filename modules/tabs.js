@@ -1,23 +1,18 @@
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+const tabs = (headerSelector, tabsSelector, contentSelector, activeClass) => {
   const header = document.querySelector(headerSelector);
-  const tab = document.querySelectorAll(tabSelector);
+  const allTab = document.querySelectorAll(tabsSelector);
   const content = document.querySelectorAll(contentSelector);
-
   const hideTabContent = () => {
-
-    content.forEach((item) => {
-      item.style.display = 'none';
+    content.forEach((blockHtml) => {
+      blockHtml.style.display = 'none';
     });
-
-    tab.forEach((elememt) => {
+    allTab.forEach((elememt) => {
       elememt.classList.remove(activeClass);
     });
   };
-
   const showTabContent = (i = 0) => {
-
     content[i].style.display = 'block';
-    tab[i].classList.add(activeClass);
+    allTab[i].classList.add(activeClass);
   };
 
   hideTabContent();
@@ -26,9 +21,22 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
   header.addEventListener('click', (event) => {
     const target = event.target;
     if (target &&
-      (target.classList.contains(tabSelector.replace(/\./, '')) ||
-        target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
-      tab.forEach((element, index) => {
+      (target.classList.contains(tabsSelector.replace(/\./, '')) ||
+        target.parentNode.classList.contains(tabsSelector.replace(/\./, '')))) {
+          allTab.forEach((element, index) => {
+        if (target == element || target.parentNode == element) {
+          hideTabContent();
+          showTabContent(index);
+        }
+      });
+    }
+  });
+  header.addEventListener('keydown', (event) => {
+    const target = event.target;
+    if (event.key === 'Enter' && target &&
+      (target.classList.contains(tabsSelector.replace(/\./, '')) ||
+        target.parentNode.classList.contains(tabsSelector.replace(/\./, '')))) {
+          allTab.forEach((element, index) => {
         if (target == element || target.parentNode == element) {
           hideTabContent();
           showTabContent(index);
@@ -37,4 +45,4 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     }
   });
 };
-export default tabs;
+export { tabs };
