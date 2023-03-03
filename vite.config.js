@@ -11,7 +11,7 @@ export default defineConfig({
     hmr: true,
   },
   plugins: [
-    // ViteAliases(),
+    ViteAliases(),
     legacy({
       targets: ['defaults', 'not IE 11']
     })

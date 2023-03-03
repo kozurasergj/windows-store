@@ -1,6 +1,5 @@
 const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
   const header = document.querySelector(headerSelector);
-  console.log(headerSelector,header)
   const tab = document.querySelectorAll(tabSelector);
   const content = document.querySelectorAll(contentSelector);
 
@@ -26,8 +25,9 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
 
   header.addEventListener('click', (event) => {
     const target = event.target;
-    if (target.classList.contains(tabSelector.replace(/\./, '')) ||
-      target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
+    if (target &&
+      (target.classList.contains(tabSelector.replace(/\./, '')) ||
+        target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
       tab.forEach((element, index) => {
         if (target == element || target.parentNode == element) {
           hideTabContent();
