@@ -1,5 +1,5 @@
 import './modules/slider';
-import { modals, tabs } from "./modules/index";
+import { modals, tabs } from "./modules";
 
 window.addEventListener('DOMContentLoaded', () => {
   modals();
@@ -18,8 +18,3 @@ window.addEventListener('DOMContentLoaded', () => {
     activeClass: 'after_click'
   });
 });
-
-
-
-
-
