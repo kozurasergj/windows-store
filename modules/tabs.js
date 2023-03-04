@@ -14,10 +14,9 @@ export const tabs = ({ headerSelector, tabsSelector, contentSelector, activeClas
     content[index].style.display = 'block';
     allTab[index].classList.add(activeClass);
   };
-
   hideTabContent();
   showTabContent();
-
+  
   header.addEventListener('click', (event) => {
     const target = event.target;
     if (target &&
