@@ -1,4 +1,4 @@
-const modals = () => {
+export const modals = () => {
   const bindModal = (triggersSelector, modalSelector, closeSelector) => {
     const triggers = document.querySelectorAll(triggersSelector);
     const modal = document.querySelector(modalSelector);
@@ -15,7 +15,7 @@ const modals = () => {
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.code === 'Escape') {
+      if (event.keyCode === 27) {
         closeModal(modal);
       }
     });
@@ -48,4 +48,3 @@ const modals = () => {
   showModalByTime('.popup', 60000);
 };
 
-export default modals;
