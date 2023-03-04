@@ -15,7 +15,7 @@ export const modals = () => {
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.code === 'Escape') {
+      if (event.keyCode === 27) {
         closeModal(modal);
       }
     });
@@ -47,3 +47,4 @@ export const modals = () => {
 
   showModalByTime('.popup', 60000);
 };
+
