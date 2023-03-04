@@ -1,4 +1,4 @@
-export const tabs = ({ headerSelector, tabsSelector, contentSelector, activeClass }) => {
+export const tabs = ({ headerSelector, tabsSelector, contentSelector, activeClass, display }) => {
   const header = document.querySelector(headerSelector);
   const allTab = document.querySelectorAll(tabsSelector);
   const content = document.querySelectorAll(contentSelector);
@@ -11,18 +11,18 @@ export const tabs = ({ headerSelector, tabsSelector, contentSelector, activeClas
     });
   };
   const showTabContent = (index = 0) => {
-    content[index].style.display = 'block';
+    content[index].style.display = display;
     allTab[index].classList.add(activeClass);
   };
   hideTabContent();
   showTabContent();
-  
+
   header.addEventListener('click', (event) => {
     const target = event.target;
     if (target &&
       (target.classList.contains(tabsSelector.replace(/\./, '')) ||
         target.parentNode.classList.contains(tabsSelector.replace(/\./, '')))) {
-          allTab.forEach((element, index) => {
+      allTab.forEach((element, index) => {
         if (target == element || target.parentNode == element) {
           hideTabContent();
           showTabContent(index);
@@ -35,7 +35,7 @@ export const tabs = ({ headerSelector, tabsSelector, contentSelector, activeClas
     if (event.key === 'Enter' && target &&
       (target.classList.contains(tabsSelector.replace(/\./, '')) ||
         target.parentNode.classList.contains(tabsSelector.replace(/\./, '')))) {
-          allTab.forEach((element, index) => {
+      allTab.forEach((element, index) => {
         if (target == element || target.parentNode == element) {
           hideTabContent();
           showTabContent(index);
