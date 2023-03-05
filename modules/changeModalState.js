@@ -1,12 +1,10 @@
-import { checkNumInput } from "./checkNumInput";
 export const changeModalState = (state) => {
   const formsOfWindow = document.querySelectorAll('.balcon_icons_img');
   const windowHeight = document.querySelectorAll('#height');
   const windowWidth = document.querySelectorAll('#width');
   const windowOption = document.querySelectorAll('#view_type');
   const windowProfile = document.querySelectorAll('.checkbox');
-  checkNumInput('#width');
-  checkNumInput('#height');
+
 
   const bindActionToElement = (event, elements, prop) => {
     elements.forEach((element, index) => {
