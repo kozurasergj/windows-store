@@ -1,0 +1,156 @@
+[33mcommit a911913b4fa798ce25c04f855c42ec19d2e008c1[m[33m ([m[1;36mHEAD -> [m[1;32mfeature5[m[33m, [m[1;31morigin/feature5[m[33m)[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Sun Mar 5 17:43:11 2023 +0200
+
+    I added class input type='nunber' . input_type_modified
+
+[33mcommit 202d8da6447526d4bf4303ca3f0386362560e782[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Sun Mar 5 17:30:03 2023 +0200
+
+    input number
+
+[33mcommit ea28aec582205ab6cff818cb7ef3700d2c3162c4[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Sat Mar 4 20:24:43 2023 +0200
+
+    Added a new feature for ordering that allows customers to select from a wider variety of formats
+
+[33mcommit b4c478b75f0bb740207e124ffb06c9c9c7a12d43[m[33m ([m[1;31morigin/feature4[m[33m, [m[1;32mfeature4[m[33m)[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Sat Mar 4 13:49:23 2023 +0200
+
+    finish commit I delete vite.congig.js
+
+[33mcommit 3e69668dff066b8c0a0865a7d3c70a5ad89931df[m
+Merge: 8f472da b9a7685
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Sat Mar 4 12:15:10 2023 +0200
+
+    Merge branch 'main' of https://github.com/kozurasergj/My-js-practice into feature4
+
+[33mcommit b9a7685a80a41038f0317100b060c16e4237c2e7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: c821487 a83c4af
+Author: Kozyura Sergey <110487239+kozurasergj@users.noreply.github.com>
+Date:   Sat Mar 4 11:59:47 2023 +0200
+
+    Merge pull request #3 from kozurasergj/feature3
+    
+    add tab
+
+[33mcommit a83c4aff41cf0f7f38681360620fbc4ea9cad2c6[m[33m ([m[1;31morigin/feature3[m[33m, [m[1;32mfeature3[m[33m)[m
+Merge: ecc0573 c821487
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Sat Mar 4 11:55:09 2023 +0200
+
+    Merge branch 'main' of https://github.com/kozurasergj/My-js-practice into feature3
+
+[33mcommit 8f472dabd975dc693964e5057a0c41f7b7d1f604[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Sat Mar 4 11:32:33 2023 +0200
+
+    form submit
+
+[33mcommit ecc0573a2807a8fa538d85a660a6aa4c8da52cc5[m[33m ([m[1;32mmain[m[33m)[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Fri Mar 3 20:25:59 2023 +0200
+
+    last commit
+
+[33mcommit d9d8aecb47ed98255b2c3975ab34430a38341c53[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Fri Mar 3 20:17:33 2023 +0200
+
+    up-date modules and chenge in export
+
+[33mcommit 36715945397bf23046023f661720ac2f1ab90c93[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Fri Mar 3 19:36:27 2023 +0200
+
+    fixed paths
+
+[33mcommit 652619ab84d5accb555511040edda083e5df1591[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Fri Mar 3 19:12:36 2023 +0200
+
+    rewrite variable
+
+[33mcommit 306a8c2ef5fca356ecdd3c6986fe48f92d302ec4[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Fri Mar 3 16:07:25 2023 +0200
+
+    add tab fix bag (fix mistakes)
+
+[33mcommit 2158efa3a46b973b80a4af2716aa822a16f9de29[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Fri Mar 3 15:29:59 2023 +0200
+
+    add tab
+
+[33mcommit c82148780ee9946d8422e49ce299eb9d60d639e7[m
+Merge: e59a452 de6e1b2
+Author: Kozyura Sergey <110487239+kozurasergj@users.noreply.github.com>
+Date:   Wed Mar 1 22:06:38 2023 +0200
+
+    Merge pull request #2 from kozurasergj/feature2
+    
+    add modal
+
+[33mcommit de6e1b2db7f31c056a8463c50b63c4cf041ae9fb[m
+Author: Kozyura Sergey <110487239+kozurasergj@users.noreply.github.com>
+Date:   Wed Mar 1 22:05:43 2023 +0200
+
+    Update modal.js
+    
+    keyCode => code
+
+[33mcommit ae04dbb30d04c742f714749083e880dd14459879[m[33m ([m[1;31morigin/feature2[m[33m, [m[1;32mfeature2[m[33m)[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Wed Mar 1 19:31:02 2023 +0200
+
+    fix
+
+[33mcommit a0403fde1481a20fa3b00b5ef1b28e6da1e6bcfb[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Wed Mar 1 19:16:13 2023 +0200
+
+    rename
+
+[33mcommit ca8b55d3be395d659c32f1183fbf2ad74c8ca863[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Wed Mar 1 16:51:25 2023 +0200
+
+    add modal
+
+[33mcommit e59a452389a389d6440419da8936f5a106656fd5[m
+Merge: 37ae57c e366a3d
+Author: Kozyura Sergey <110487239+kozurasergj@users.noreply.github.com>
+Date:   Wed Mar 1 13:19:38 2023 +0200
+
+    Merge pull request #1 from kozurasergj/feature1
+    
+    site
+
+[33mcommit e366a3da31532385115e43950c03742e3d417e8c[m[33m ([m[1;31morigin/feature1[m[33m)[m
+Author: Kozyura Sergey <110487239+kozurasergj@users.noreply.github.com>
+Date:   Wed Mar 1 13:18:41 2023 +0200
+
+    Delete dist directory
+
+[33mcommit a22254b8918f685a91fa8818991f933c5280bcf0[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Wed Mar 1 13:14:42 2023 +0200
+
+    fix
+
+[33mcommit 7da64797d5dd8e81cc423ff818e1b979475a6dbf[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Wed Mar 1 12:49:43 2023 +0200
+
+    site
+
+[33mcommit 37ae57c65003d7c435f58c4e9c4966ca48b6a8c7[m
+Author: kozurasergj <kozura.sergj33@gmail.com>
+Date:   Wed Mar 1 12:47:03 2023 +0200
+
+    first commit
