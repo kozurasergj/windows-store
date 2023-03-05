@@ -1,4 +1,3 @@
-import { checkNumInput } from "./checkNumInput";
 export const changeModalState = (state) => {
   const formsOfWindow = document.querySelectorAll('.balcon_icons_img');
   const windowHeight = document.querySelectorAll('#height');
@@ -9,6 +8,7 @@ export const changeModalState = (state) => {
 
   checkNumInput('#width');
   checkNumInput('#height');
+
 
   const bindActionToElement = (event, elements, prop) => {
     elements.forEach((element, index) => {
