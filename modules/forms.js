@@ -1,8 +1,6 @@
-import { checkNumInput } from "./checkNumInput";
 export const form = (state) => {
   const forms = document.querySelectorAll('form');
   const inputs = document.querySelectorAll('input');
-  checkNumInput(`input[name="user_phone"]`);
 
   const message = {
     loading: 'Загрузка...',
@@ -22,6 +20,15 @@ export const form = (state) => {
       input.value = '';
     });
   };
+
+  const closeAllModal = () => {
+    const windows = document.querySelectorAll('[data-modal]');
+    windows.forEach((window) => {
+      window.style.display = 'none';
+      document.body.classList.remove('modal-open');
+    });
+  }
+
   forms.forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -37,7 +44,7 @@ export const form = (state) => {
       }
 
       postData('server.php', formData)
-        .then((response) => {
+        .then(() => {
           statusMessage.textContent = message.success;
         })
         .catch(() => {
@@ -47,7 +54,8 @@ export const form = (state) => {
           clearInputs();
           setTimeout(() => {
             statusMessage.remove();
-          }, 5000);
+            closeAllModal();
+          }, 3000);
         });
     });
   });
