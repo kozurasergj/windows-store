@@ -1,5 +1,5 @@
 export const modals = () => {
-  const bindModal = ({ triggersSelector, modalSelector, closeSelector, closeClickOverlayModal }) => {
+  const bindModal = ({ triggersSelector, modalSelector, closeSelector, closeClickOverlayModal, closeAfterSubmit }) => {
     const triggers = document.querySelectorAll(triggersSelector);
     const modal = document.querySelector(modalSelector);
     const close = document.querySelector(closeSelector);
@@ -21,6 +21,11 @@ export const modals = () => {
         window.style.display = 'none';
       });
     };
+
+    const closeModal = (modal) => {
+      modal.style.display = 'none';
+      document.body.classList.remove('modal-open');
+    }
 
     document.addEventListener('keydown', (event) => {
       if (event.code === 'Escape') {
@@ -46,10 +51,7 @@ export const modals = () => {
       document.body.classList.add('modal-open');
     }, time);
   }
-  const closeModal = (modal) => {
-    modal.style.display = 'none';
-    document.body.classList.remove('modal-open');
-  }
+
 
   bindModal({
     triggersSelector: '.popup_engineer_btn',
