@@ -1501,7 +1501,12 @@ textarea:focus {
   .form h2 span {
     font-size: 2rem;
   }
-
+  .input_type_modified{
+    -moz-appearance: textfield;
+  }
+  .input_type_modified::-webkit-inner-spin-button{
+    display: none;
+  }
   .form_input {
     padding: 2rem 3rem;
     margin-bottom: 2rem;
