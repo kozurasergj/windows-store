@@ -852,6 +852,7 @@ textarea:focus {
 
 /*Modals*/
 .popup,
+.popup_photo,
 .popup_engineer,
 .popup_calc_end {
   display: none;

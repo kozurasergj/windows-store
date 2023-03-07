@@ -3,7 +3,7 @@ export const images = () => {
   const bigImage = document.createElement('img');
   const workSection = document.querySelector('.works');
 
-  imgPopup.classList.add('popup');
+  imgPopup.classList.add('popup_photo');
   workSection.appendChild(imgPopup);
 
   imgPopup.style.justifyContent = 'center';
@@ -20,7 +20,7 @@ export const images = () => {
       const path = target.parentNode.getAttribute('href');
       bigImage.setAttribute('src', path);
     }
-    if (target && target.matches('div.popup')) {
+    if (target && target.matches('div.popup_photo')) {
       imgPopup.style.display = 'none';
     }
   });
