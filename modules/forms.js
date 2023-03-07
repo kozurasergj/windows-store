@@ -1,13 +1,9 @@
-export const form = () => {
+import { checkNumInput } from "./CheckNumInput";
+export const form = (state) => {
   const forms = document.querySelectorAll('form');
   const inputs = document.querySelectorAll('input');
-  const phoneInputs = document.querySelectorAll(`input[name="user_phone"]`);
+  checkNumInput(`input[name="user_phone"]`);
 
-  phoneInputs.forEach((phoneInput) => {
-    phoneInput.addEventListener('input', () => {
-      phoneInput.value = phoneInput.value.replace(/\D/, '');
-    });
-  });
   const message = {
     loading: 'Загрузка...',
     success: 'Спасибо! Скоро мы с вами свяжемся',
@@ -26,15 +22,31 @@ export const form = () => {
       input.value = '';
     });
   };
+
+  const closeAllModal = () => {
+    const windows = document.querySelectorAll('[data-modal]');
+    windows.forEach((window) => {
+      window.style.display = 'none';
+      document.body.classList.remove('modal-open');
+    });
+  }
+
   forms.forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       const statusMessage = document.createElement('div');
       statusMessage.classList.add('status');
       form.appendChild(statusMessage);
+
       const formData = new FormData(form);
+      if (form.getAttribute('data-calc' === 'end')) {
+        for (keyForm in state) {
+          formData.append(keyForm, state[keyForm]);
+        }
+      }
+
       postData('server.php', formData)
-        .then((response) => {
+        .then(() => {
           statusMessage.textContent = message.success;
         })
         .catch(() => {
@@ -44,7 +56,8 @@ export const form = () => {
           clearInputs();
           setTimeout(() => {
             statusMessage.remove();
-          }, 5000);
+            closeAllModal();
+          }, 3000);
         });
     });
   });

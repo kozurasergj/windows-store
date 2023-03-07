@@ -13,6 +13,7 @@ body {
 .status {
   display: block;
   color: red;
+  font-size: 16px;
 }
 
 .faded {
@@ -1044,7 +1045,9 @@ textarea:focus {
 }
 
 .popup_calc_profile_content .checkbox {
-  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 .popup_calc_profile_content .checkbox-custom {
@@ -1500,7 +1503,12 @@ textarea:focus {
   .form h2 span {
     font-size: 2rem;
   }
-
+  .input_type_modified {
+    -moz-appearance: textfield;
+  }
+  .input_type_modified::-webkit-inner-spin-button {
+    display: none;
+  }
   .form_input {
     padding: 2rem 3rem;
     margin-bottom: 2rem;
