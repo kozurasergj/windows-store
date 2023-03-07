@@ -1,6 +1,5 @@
 export const timer = (selector, deadline) => {
   const addZero = (num) => num <= 9 ? `0${num}` : num;
-
   const getTimeRemaining = (endTime) => {
     const betweenTime = Date.parse(endTime) - Date.parse(new Date());
     const seconds = Math.floor((betweenTime / 1000) % 60);
@@ -8,7 +7,7 @@ export const timer = (selector, deadline) => {
     const hours = Math.floor((betweenTime / (1000 * 60 * 60)) % 24);
     const days = Math.floor((betweenTime / (1000 * 60 * 60 * 24)));
     return { betweenTime, seconds, minutes, hours, days };
-  };
+
 
   const updateClock = () => {
     const timeObj = getTimeRemaining(deadline);
